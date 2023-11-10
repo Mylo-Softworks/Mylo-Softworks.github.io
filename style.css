@@ -6,10 +6,14 @@
   font-family: OpenSans-italic;
   src: url("fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf");
 }
+@font-face {
+  font-family: Roboto-flex;
+  src: url("fonts/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.ttf");
+}
 body {
-  background: #484b5f;
+  background: #3f4650;
   color: white;
-  font-family: OpenSans, serif;
+  font-family: Roboto-flex, OpenSans, sans-serif;
 }
 
 .center {
@@ -17,10 +21,88 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  font-weight: 200;
 }
 
 .company-name {
   font-size: 40px;
+  text-shadow: black 1px 2px 4px;
+}
+
+.fill, .fill * {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.no-select {
+  cursor: default;
+  user-select: none;
+}
+
+.blur {
+  filter: blur(10px);
+}
+
+.footer {
+  position: absolute;
+  bottom: 5px;
+}
+
+.left {
+  position: absolute;
+  left: 5px;
+}
+
+.right {
+  position: absolute;
+  right: 5px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.no-break {
+  white-space: nowrap;
+}
+
+.main-div {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  background: rgba(59, 63, 70, 0.8);
+  width: 300px;
+}
+
+@keyframes blink-indicator {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#indicator {
+  position: absolute;
+  width: 2px;
+  height: 17px;
+  bottom: 10px;
+  background: white;
+  transition: 0.05s ease-out;
+}
+
+#animated-content {
+  display: inline-block;
 }
 
 /*# sourceMappingURL=style.css.map */
