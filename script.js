@@ -1,6 +1,3 @@
-// Load particles
-particlesJS.load('particles-js', 'assets/particles.json');
-
 const lines = [
     'Writing mobile apps and games',
     'Creating new experiences',
