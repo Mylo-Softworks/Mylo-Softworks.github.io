@@ -6,19 +6,32 @@
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="osstyle.css">
-    <script src="script.js" type="application/javascript"></script>
 </head>
 <body>
-    <div class="fullsize" id="screen"></div>
+    <div class="fullsize" id="screen">
+        <div id="desktopicons"><!--Desktop icons are added here through javascript--></div>
+    </div>
     <div class="taskbar">
-        <div id="homebutton" onclick="homeButtonAction()"></div>
+        <div id="homebutton"></div>
+        <div id="allwindows"></div>
+        <div id="datetime">
+            <div id="time">
+                xx:xx
+            </div>
+            <div id="date">
+                xx/xx/xxxx
+            </div>
+        </div>
     </div>
     <div id="homemenu" class="hidden">
         <div class="homemenufooter">
-            <div class="infobutton" title="Information">
+            <div class="infobutton" id="infobutton" title="Information">
                 <div class="centered">?</div>
             </div>
         </div>
     </div>
+
+    <!--Script at the bottom so all elements are loaded when the script runs-->
+    <script src="script.js" type="module"></script>
 </body>
 </html>

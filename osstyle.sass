@@ -10,6 +10,7 @@ $taskbarSize: 50px
 #screen
   background: rgb(0,38,255)
   background: linear-gradient(164deg, rgba(0,38,255,1) 0%, rgba(87,0,233,1) 50%, rgba(194,0,198,1) 100%)
+  overflow: hidden
 
 .taskbar
   position: absolute
@@ -23,12 +24,15 @@ $taskbarSize: 50px
   backdrop-filter: blur(5px)
   background: rgba(0, 0, 0, 0.2)
 
+  display: flex
+  z-index: 99999
+
 #homebutton
   width: $taskbarSize
   height: $taskbarSize
-  position: absolute
-  left: 0
-  bottom: 0
+  //position: absolute
+  //left: 0
+  //bottom: 0
   //background: url("assets/img/logo_basic.png")
   background: rgba(0, 0, 0, 0.2) url("assets/img/logo_basic.png")
   background-size: cover
@@ -40,7 +44,7 @@ $taskbarSize: 50px
   background-size: cover
 
 #homebutton:active
-  background: rgba(0, 0, 0, 0.6) url("assets/img/logo_basic.png")
+  background: rgba(0, 0, 0, 0.3) url("assets/img/logo_basic.png")
   background-size: cover
 
 #homemenu
@@ -52,6 +56,22 @@ $taskbarSize: 50px
 
   backdrop-filter: blur(5px)
   background: rgba(0, 0, 0, 0.6)
+  z-index: 99999
+
+#allwindows
+  flex-grow: 1
+  overflow-y: auto
+
+#datetime
+  width: 100px
+  text-align: center
+  user-select: none
+  margin: auto
+  font-size: 14px
+
+#time
+  margin-bottom: 1px
+  margin-top: -2px // Some visual alignment
 
 .hidden
   display: none !important
@@ -88,3 +108,104 @@ $taskbarSize: 50px
   left: 50%
   top: 50%
   transform: translate(-50%, -50%)
+
+#desktopicons
+  display: inline-flex
+  flex-direction: column
+  flex-wrap: wrap
+  height: 100%
+
+.icon
+  width: 100px
+  height: 100px
+  display: flex
+  flex-direction: column
+  padding: 5px
+
+  .picture
+    width: 100%
+    height: 100%
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+  p
+    width: 100%
+    text-align: center
+    user-select: none
+
+.icon:hover
+  background: rgba(0, 0, 0, 0.15)
+
+.icon:active
+  background: rgba(0, 0, 0, 0.1)
+
+
+// Windows
+.window
+  position: absolute
+  top: 0
+  left: 0
+
+  width: 500px
+  height: 300px
+  background: rgba(0, 0, 0, 0.5)
+  // TODO
+  border: 1px solid black // TODO
+  backdrop-filter: blur(5px)
+
+.titlebar
+  width: 100%
+  height: 30px
+  background: black // TODO
+  display: flex
+  box-sizing: border-box
+  user-select: none
+  cursor: move
+
+  .title
+    flex-grow: 1
+    margin: auto auto auto 5px
+
+  .buttons
+    margin: auto
+
+    .close
+      width: 20px
+      height: 20px
+      margin: 5px
+      border-radius: 100px
+      background: red
+      cursor: pointer
+
+.window-content
+  width: 100%
+  height: 100%
+  box-sizing: border-box
+  padding: 5px
+
+// Info page
+.info-logo
+  width: 200px
+  height: 270px
+  background-image: url('assets/img/logo_basic.png')
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+
+.info-flex
+  display: inline-flex
+  justify-content: space-between
+  position: absolute
+  top: 30px
+  bottom: 0
+  left: 0
+  right: 0
+
+.info-content
+  margin: auto 10px auto 0
+  flex-grow: 1
+  display: flex
+  flex-direction: column
+  text-align: center
+  gap: 10px
+  user-select: none
