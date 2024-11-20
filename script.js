@@ -2,6 +2,8 @@ import {createDesktopIcon} from "./scripts/os/desktopicons.js";
 import {Window} from "./scripts/os/windows.js";
 import {activateClock} from "./scripts/os/clock.js";
 import {showAboutWindow} from "./scripts/os/pages/about.js";
+import {showPrivacyWindow} from "./scripts/os/pages/privacy.js";
+import {showProductsWindow} from "./scripts/os/pages/products.js";
 
 function homeButtonAction(force = null) {
     const homemenu = document.getElementById('homemenu')
@@ -21,4 +23,5 @@ document.getElementById('infobutton').addEventListener('click', () => showAboutW
 activateClock()
 
 createDesktopIcon("About", "assets/img/logo_basic.png", () => {showAboutWindow()})
-createDesktopIcon("Privacy", "assets/img/logo_basic.png", () => {window.open("privacy.html", "_blank")})
+createDesktopIcon("Privacy", "assets/img/logo_basic.png", () => {showPrivacyWindow()})
+// createDesktopIcon("Products", "assets/img/logo_basic.png", () => {showProductsWindow()}) // Empty for now
