@@ -9,6 +9,6 @@ export function activateClock() {
 function updateClock() {
     const dateVal = new Date()
     const timeValSplit = dateVal.toLocaleTimeString().split(":")
-    time.textContent = timeValSplit[0] + timeValSplit[1]
+    time.textContent = timeValSplit[0] + ":" + timeValSplit[1]
     date.textContent = dateVal.toLocaleDateString()
 }
