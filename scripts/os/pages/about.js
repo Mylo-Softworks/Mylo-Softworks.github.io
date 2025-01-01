@@ -19,7 +19,7 @@ function createInfoEl() {
     content.classList.add('info-content')
 
     addContentElA(content, "mylo@mylosoftworks.com", "mailto:mylo@mylosoftworks.com")
-    addContentElText(content, "© 2024 Mylo Softworks")
+    addContentElText(content, `© ${new Date().getFullYear()} Mylo Softworks`)
 
     flex.appendChild(content)
 
