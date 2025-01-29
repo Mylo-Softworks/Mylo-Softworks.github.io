@@ -25,3 +25,11 @@ activateClock()
 createDesktopIcon("About", "assets/img/logo_basic.png", () => {showAboutWindow()})
 createDesktopIcon("Privacy", "assets/img/logo_basic.png", () => {showPrivacyWindow()})
 // createDesktopIcon("Products", "assets/img/logo_basic.png", () => {showProductsWindow()}) // Empty for now
+
+// Make accessible to kotlin
+window.createDesktopIcon = createDesktopIcon
+window.Window = Window
+
+document.dispatchEvent(new Event("jsReadySignal"))
+
+// document.getElementById("infobutton")

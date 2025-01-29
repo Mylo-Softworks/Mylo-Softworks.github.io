@@ -16,7 +16,7 @@ export class Window {
      */
     element = null
     /**
-     * @type {contentElement}
+     * @type {Element}
      */
     contentElement = null
 
