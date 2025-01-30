@@ -31,6 +31,9 @@ export class Window {
         this.contentElement = contentEl
         this.element = this.createElement(title, contentEl)
 
+        maxZIndex++
+        this.element.style.zIndex = `${maxZIndex}`
+
         this.position = {
             x: window.innerWidth/2 - 250,
             y: window.innerHeight/2 - 150
