@@ -23,7 +23,7 @@ document.getElementById('infobutton').addEventListener('click', () => showAboutW
 activateClock()
 
 createDesktopIcon("About", "assets/img/logo_basic.png", () => {showAboutWindow()})
-createDesktopIcon("Privacy", "assets/img/logo_basic.png", () => {showPrivacyWindow()})
+// createDesktopIcon("Privacy", "assets/img/logo_basic.png", () => {showPrivacyWindow()}) // Empty for now
 // createDesktopIcon("Products", "assets/img/logo_basic.png", () => {showProductsWindow()}) // Empty for now
 
 // Make accessible to kotlin
